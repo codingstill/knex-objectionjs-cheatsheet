@@ -1,0 +1,29 @@
+{
+  "name": "knex-objectionjs-cheatsheet",
+  "version": "1.0.0",
+  "description": "A collection of examples on how to use Knex and Objection.js",
+  "main": "index.js",
+  "scripts": {
+    "sample": "node index -t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingstill/knex-objectionjs-cheatsheet.git"
+  },
+  "keywords": [
+    "knex",
+    "objectionjs",
+    "orm"
+  ],
+  "author": "Tasos Karagiannis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codingstill/knex-objectionjs-cheatsheet/issues"
+  },
+  "homepage": "https://github.com/codingstill/knex-objectionjs-cheatsheet#readme",
+  "dependencies": {
+    "knex": "^0.21.17",
+    "objection": "^2.2.14",
+    "sqlite3": "^5.0.2"
+  }
+}
