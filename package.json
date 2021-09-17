@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/codingstill/knex-objectionjs-cheatsheet#readme",
   "dependencies": {
-    "knex": "^0.21.17",
-    "objection": "^2.2.14",
+    "knex": "^0.95.11",
+    "objection": "^2.2.16",
     "sqlite3": "^5.0.2"
   }
 }
