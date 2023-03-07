@@ -25,7 +25,7 @@ class User extends Model {
     static get jsonSchema () {
         return {
             type: 'object',
-            required: [ 'id', 'full_name' ],
+            required: [ 'fullName', 'email' ],
 
             properties: {
                 id: {type: 'integer'},
@@ -38,14 +38,14 @@ class User extends Model {
 
     static get relationMappings() {
         return {
-            user_orders: {
-                relation: Model.HasManyRelation,
-                modelClass: Order,
-                join: {
-                    from: 'users.id',
-                    to : 'orders.user_id'
-                }
-            }
+            // user_orders: {
+            //     relation: Model.HasManyRelation,
+            //     modelClass: Order,
+            //     join: {
+            //         from: 'users.id',
+            //         to : 'orders.user_id'
+            //     }
+            // }
         };
     }
     
@@ -55,8 +55,8 @@ class User extends Model {
         for (const column in this.constructor.jsonSchema.properties) {
             const cp = this.constructor.jsonSchema.properties[column];
 
-            if(cp.format === 'date-time' && typeof this[key] === 'number') {
-                this[key] = new Date(this[key]).toISOString()
+            if(cp.format === 'date-time' && typeof this[column] === 'number') {
+                this[column] = new Date(this[column]).toISOString()
             }
         }
     }

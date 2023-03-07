@@ -4,8 +4,7 @@ const getKnex = require('./knexfile');
 
 const init = async () => {
 
-    const stepIndex = parseInt(process.argv[3]);
-    
+    const stepIndex = parseInt(process.argv[2]);
     const samples = fs.readdirSync('./samples').sort((a, b) => {
         return parseInt(a.split('_')[0]) - parseInt(b.split('_')[0]);
     });
